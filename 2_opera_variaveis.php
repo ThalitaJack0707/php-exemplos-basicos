@@ -2,7 +2,7 @@
 
 // Recebe 2 valores pela URL usando o método GET
 
-// Exemplo de URL: http://localhost/php-basico-out-2024-Alunos/2_opera_veriaveis.php?numero1=10&numeros2=5
+// Exemplo de URL: http://localhost/php-exemplos-basicos/2_opera_variaveis.php?numero1=10&numero2=5
 
 $numero1 = $_GET['numero1'];
 $numero2 = $_GET['numero2'];
@@ -23,7 +23,7 @@ $divisao = $numero1 / $numero2;
 echo "Soma: $soma <br>";
 echo "Subtração: $subtracao <br>";
 echo "Multiplicação: $multiplicacao <br>";
-echo "Divisão: $divisao <br>"
+echo "Divisão: $divisao <br>";
 } else {
     echo "Por favor, forneça os valores de numero1 e numero2 pela URL.";
 }
