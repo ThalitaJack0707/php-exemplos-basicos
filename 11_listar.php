@@ -32,5 +32,6 @@ if ($result->num_rows > 0) {
     echo "Nenhum cliente encontrado.";
 }
 
-// Fecha a conex   vclose();
+// Fecha a conexão
+$conn->close();
 ?>

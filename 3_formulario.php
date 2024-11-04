@@ -7,17 +7,20 @@
 <body>
     <form method="post" action="">
         <label for="nome">Nome:</label>
-        <input type="text" name="nome" required><br>
-        
-        <label for="email">Email</label>
-        <input type="email" name="telefone" required><br>
+        <input type="text" id="nome" name="nome" required><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br>
+
+        <label for="telefone">Telefone:</label>
+        <input type="text" id="telefone" name="telefone" required><br>
 
         <button type="submit">Enviar</button>
     </form>
 
     <?php
     // Verifica se o formulário foi enviado
-    if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         // Recebe os valores enviados pelo formulário
         $nome = $_POST['nome'];
         $email = $_POST['email'];
@@ -25,9 +28,9 @@
 
         // Exibe os valores recebidos
         echo "<h2>Dados Recebidos:</h2>";
-        echo "Nome: $nome <br>";
-        echo "Email: $email <br>";
-        echo "Telefone: $telefone <br>";
+        echo "Nome: " . htmlspecialchars($nome) . "<br>";
+        echo "Email: " . htmlspecialchars($email) . "<br>";
+        echo "Telefone: " . htmlspecialchars($telefone) . "<br>";
     }
     ?>
 </body>
